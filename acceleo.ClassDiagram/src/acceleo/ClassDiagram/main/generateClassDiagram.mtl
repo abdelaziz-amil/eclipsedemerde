@@ -1,0 +1,65 @@
+[comment encoding = UTF-8 /]
+[module generateClassDiagram('http://ClassDiagram/1.0')]
+
+[comment Retourne le type Java d'un type du modèle /]
+[query public javaType(type : Type) : String =
+if (type.oclIsTypeOf(VoidType)) then 'void'
+else if (type.oclIsTypeOf(StringType)) then 'String'
+else if (type.oclIsTypeOf(IntegerType)) then 'int'
+else if (type.oclIsTypeOf(BooleanType)) then 'boolean'
+else type.name
+endif
+endif
+endif
+endif
+/]
+
+[template public generateModelBase(aModelBase : ModelBase)]
+[comment @main/]
+[for (cl : Class | aModelBase.allClasses)]
+[file (cl.name.concat('.java'), false, 'UTF-8')]
+package generate;
+
+public class [ cl.name /] {
+
+    [comment Génération des attributs avec les bons types /]
+    [for (att : Attribute | cl.attributes)]
+    private [javaType(att.type)/] [att.name/];
+    [/for]
+
+    [comment Constructeur par défaut /]
+    public [cl.name/]() {
+    }
+
+    [comment Constructeur avec tous les attributs /]
+    public [cl.name/]([for (att : Attribute | cl.attributes) separator(', ')][javaType(att.type)/] [att.name/][/for]) {
+        [for (att : Attribute | cl.attributes)]
+        this.[att.name/] = [att.name/];
+        [/for]
+    }
+
+    [comment Getters & Setters /]
+    [for (att : Attribute | cl.attributes)]
+    public [javaType(att.type)/] get[att.name.toUpperFirst()/]() {
+        return this.[att.name/];
+    }
+
+    public void set[att.name.toUpperFirst()/]([javaType(att.type)/] [att.name/]) {
+        this.[att.name/] = [att.name/];
+    }
+    [/for]
+	[comment Génération des méthodes /]
+	[for (meth : Method | cl.methods)]
+	public [javaType(meth.returnType)/] [meth.name/]([for (i : Integer | Sequence{1..meth.paramTypes->size()}) separator(', ')][javaType(meth.paramTypes->at(i))/] [meth.paramNames->at(i)/][/for]) {
+	    [if (meth.returnType.oclIsTypeOf(VoidType))]
+	    // TODO: Implémenter la méthode [meth.name/]
+	    [else]
+	    return null; // TODO: Retourner une valeur appropriée pour la méthode [meth.name/]
+	    [/if]
+	}
+	[/for]
+
+}
+[/file]
+[/for]
+[/template]
