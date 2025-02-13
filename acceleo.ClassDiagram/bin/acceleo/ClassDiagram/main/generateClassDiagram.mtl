@@ -48,8 +48,10 @@ public class [ cl.name /] {
         this.[att.name/] = [att.name/];
     }
     [/for]
+
 	[comment Génération des méthodes /]
 	[for (meth : Method | cl.methods)]
+	[if (not meth.name.startsWith('get') and not meth.name.startsWith('set'))]
 	public [javaType(meth.returnType)/] [meth.name/]([for (i : Integer | Sequence{1..meth.paramTypes->size()}) separator(', ')][javaType(meth.paramTypes->at(i))/] [meth.paramNames->at(i)/][/for]) {
 	    [if (meth.returnType.oclIsTypeOf(VoidType))]
 	    // TODO: Implémenter la méthode [meth.name/]
@@ -57,6 +59,7 @@ public class [ cl.name /] {
 	    return null; // TODO: Retourner une valeur appropriée pour la méthode [meth.name/]
 	    [/if]
 	}
+	[/if]
 	[/for]
 
 }

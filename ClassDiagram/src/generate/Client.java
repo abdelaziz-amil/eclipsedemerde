@@ -13,6 +13,9 @@ public class Client {
         this.addr = addr;
     }
 
+    public String getName() {
+        return this.name;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -24,6 +27,10 @@ public class Client {
     public void setAddr(String addr) {
         this.addr = addr;
     }
+
+	public void changeAddr(String addr) {
+	    // TODO: Implémenter la méthode changeAddr
+	}
 
 
 }

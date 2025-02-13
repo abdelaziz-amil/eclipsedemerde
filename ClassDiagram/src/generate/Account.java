@@ -15,9 +15,15 @@ public class Account {
         this.balance = balance;
     }
 
+    public int getId() {
+        return this.id;
+    }
 
     public void setId(int id) {
         this.id = id;
+    }
+    public int getOverdraft() {
+        return this.overdraft;
     }
 
     public void setOverdraft(int overdraft) {
@@ -30,6 +36,10 @@ public class Account {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+
+	public void changeOverdraft(int val) {
+	    // TODO: Implémenter la méthode changeOverdraft
+	}
 
 
 }

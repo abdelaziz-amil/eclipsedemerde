@@ -296,121 +296,162 @@
               <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Classifier/attributes"/>
             </iterSet>
           </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
           <body xsi:type="mtl:ForBlock">
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;public "/>
-            <body xsi:type="mtl:QueryInvocation" definition="/0/javaType">
-              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <argument xsi:type="ocl.ecore:PropertyCallExp">
-                <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Type"/>
-                <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
-                  <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
-                </source>
-                <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/returnType"/>
-              </argument>
-            </body>
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
-            <body xsi:type="ocl.ecore:PropertyCallExp">
-              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
-                <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
-              </source>
-              <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//NamedElement/name"/>
-            </body>
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
-            <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;public "/>
               <body xsi:type="mtl:QueryInvocation" definition="/0/javaType">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <argument xsi:type="ocl.ecore:OperationCallExp">
+                <argument xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Type"/>
-                  <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(Type)">
-                    <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
-                      <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
-                    </source>
-                    <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/paramTypes"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                    <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
                   </source>
-                  <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/0/generateModelBase/%/%/%.16/%.5/i">
-                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                  </argument>
-                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+                  <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/returnType"/>
                 </argument>
               </body>
               <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
-              <body xsi:type="ocl.ecore:OperationCallExp">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(String)">
-                  <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
-                    <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
-                  </source>
-                  <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//Method/paramNames"/>
-                </source>
-                <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/0/generateModelBase/%/%/%.16/%.5/i">
-                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                </argument>
-                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
-              </body>
-              <loopVariable name="i">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-              </loopVariable>
-              <iterSet xsi:type="ocl.ecore:CollectionLiteralExp" eType="/10/Sequence(Integer)" kind="Sequence">
-                <part xsi:type="ocl.ecore:CollectionRange">
-                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                  <first xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
-                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                  </first>
-                  <last xsi:type="ocl.ecore:OperationCallExp">
-                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-                    <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(Type)">
-                      <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
-                        <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
-                      </source>
-                      <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/paramTypes"/>
-                    </source>
-                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
-                  </last>
-                </part>
-              </iterSet>
-              <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", ">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              </each>
-            </body>
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;"/>
-            <body xsi:type="mtl:IfBlock">
-              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;    // TODO: Implémenter la méthode "/>
               <body xsi:type="ocl.ecore:PropertyCallExp">
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
+                <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
                   <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
                 </source>
                 <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//NamedElement/name"/>
               </body>
-              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
-              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-                <source xsi:type="ocl.ecore:PropertyCallExp">
-                  <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Type"/>
-                  <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
-                    <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+              <body xsi:type="mtl:ForBlock">
+                <body xsi:type="mtl:QueryInvocation" definition="/0/javaType">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:OperationCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Type"/>
+                    <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(Type)">
+                      <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                        <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/paramTypes"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/0/generateModelBase/%/%/%.17/%/%.5/i">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    </argument>
+                    <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+                  </argument>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+                <body xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(String)">
+                    <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                      <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//Method/paramNames"/>
                   </source>
-                  <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/returnType"/>
-                </source>
-                <argument xsi:type="ocl.ecore:TypeExp" eType="/4/VoidType">
-                  <referredType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//VoidType"/>
-                </argument>
-                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
-              </ifExpr>
-              <else>
-                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;    return null; // TODO: Retourner une valeur appropriée pour la méthode "/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/0/generateModelBase/%/%/%.17/%/%.5/i">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/at"/>
+                </body>
+                <loopVariable name="i">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                </loopVariable>
+                <iterSet xsi:type="ocl.ecore:CollectionLiteralExp" eType="/10/Sequence(Integer)" kind="Sequence">
+                  <part xsi:type="ocl.ecore:CollectionRange">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    <first xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                    </first>
+                    <last xsi:type="ocl.ecore:OperationCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(Type)">
+                        <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                          <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                        </source>
+                        <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/paramTypes"/>
+                      </source>
+                      <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+                    </last>
+                  </part>
+                </iterSet>
+                <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", ">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                </each>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") {&#xA;"/>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;    // TODO: Implémenter la méthode "/>
                 <body xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-                  <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.16/meth">
+                  <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
                     <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
                   </source>
                   <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//NamedElement/name"/>
                 </body>
                 <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
-              </else>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Type"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                      <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EReference" href="http://ClassDiagram/1.0#//Method/returnType"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/4/VoidType">
+                    <referredType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//VoidType"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+                </ifExpr>
+                <else>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;    return null; // TODO: Retourner une valeur appropriée pour la méthode "/>
+                  <body xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                      <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//NamedElement/name"/>
+                  </body>
+                  <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+                </else>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;}&#xA;"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/startsWith">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                    <source xsi:type="ocl.ecore:PropertyCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                        <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//NamedElement/name"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="get">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    </argument>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+                </source>
+                <argument xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/startsWith">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                    <source xsi:type="ocl.ecore:PropertyCallExp">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                      <source xsi:type="ocl.ecore:VariableExp" name="meth" referredVariable="/0/generateModelBase/%/%/%.17/meth">
+                        <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+                      </source>
+                      <referredProperty xsi:type="ecore:EAttribute" href="http://ClassDiagram/1.0#//NamedElement/name"/>
+                    </source>
+                    <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="set">
+                      <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    </argument>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/and"/>
+              </ifExpr>
             </body>
-            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;}&#xA;"/>
             <loopVariable name="meth">
               <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
             </loopVariable>
@@ -463,6 +504,13 @@
       <eOperations name="toUpperFirst">
         <eAnnotations source="MTL"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+      <eOperations name="startsWith">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="substring">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
       </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
@@ -722,6 +770,9 @@
     <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ClassDiagram/1.0#//Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -891,17 +942,17 @@
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/generateModelBase">
       <details key="start" value="434"/>
-      <details key="end" value="2015"/>
+      <details key="end" value="2099"/>
       <details key="line" value="17"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/generateModelBase/%">
       <details key="start" value="511"/>
-      <details key="end" value="2003"/>
+      <details key="end" value="2087"/>
       <details key="line" value="19"/>
     </eAnnotations>
     <eAnnotations source="positions.27" references="/0/generateModelBase/%/%">
       <details key="start" value="554"/>
-      <details key="end" value="1996"/>
+      <details key="end" value="2080"/>
       <details key="line" value="20"/>
     </eAnnotations>
     <eAnnotations source="positions.28" references="/0/generateModelBase/%/%/%">
@@ -1315,281 +1366,346 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.110" references="/0/generateModelBase/%/%/%.16">
-      <details key="start" value="1534"/>
-      <details key="end" value="1985"/>
-      <details key="line" value="52"/>
+      <details key="start" value="1496"/>
+      <details key="end" value="1497"/>
+      <details key="line" value="51"/>
     </eAnnotations>
-    <eAnnotations source="positions.111" references="/0/generateModelBase/%/%/%.16/%">
-      <details key="start" value="1569"/>
-      <details key="end" value="1577"/>
+    <eAnnotations source="positions.111" references="/0/generateModelBase/%/%/%.17">
+      <details key="start" value="1535"/>
+      <details key="end" value="2069"/>
       <details key="line" value="53"/>
     </eAnnotations>
-    <eAnnotations source="positions.112" references="/0/generateModelBase/%/%/%.16/%.1">
-      <details key="start" value="1578"/>
-      <details key="end" value="1603"/>
+    <eAnnotations source="positions.112" references="/0/generateModelBase/%/%/%.17/%">
+      <details key="start" value="1571"/>
+      <details key="end" value="2061"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateModelBase/%/%/%.17/%/%">
+      <details key="start" value="1646"/>
+      <details key="end" value="1654"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateModelBase/%/%/%.17/%/%.1">
+      <details key="start" value="1655"/>
+      <details key="end" value="1680"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.113" references="/0/generateModelBase/%/%/%.16/%.1/%">
-      <details key="start" value="1587"/>
-      <details key="end" value="1602"/>
+    <eAnnotations source="positions.115" references="/0/generateModelBase/%/%/%.17/%/%.1/%">
+      <details key="start" value="1664"/>
+      <details key="end" value="1679"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.114" references="/0/generateModelBase/%/%/%.16/%.1/%/meth">
-      <details key="start" value="1587"/>
-      <details key="end" value="1591"/>
+    <eAnnotations source="positions.116" references="/0/generateModelBase/%/%/%.17/%/%.1/%/meth">
+      <details key="start" value="1664"/>
+      <details key="end" value="1668"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.115" references="/0/generateModelBase/%/%/%.16/%.2">
-      <details key="start" value="1605"/>
-      <details key="end" value="1606"/>
-      <details key="line" value="53"/>
+    <eAnnotations source="positions.117" references="/0/generateModelBase/%/%/%.17/%/%.2">
+      <details key="start" value="1682"/>
+      <details key="end" value="1683"/>
+      <details key="line" value="55"/>
     </eAnnotations>
-    <eAnnotations source="positions.116" references="/0/generateModelBase/%/%/%.16/%.3">
-      <details key="start" value="1607"/>
-      <details key="end" value="1616"/>
+    <eAnnotations source="positions.118" references="/0/generateModelBase/%/%/%.17/%/%.3">
+      <details key="start" value="1684"/>
+      <details key="end" value="1693"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.117" references="/0/generateModelBase/%/%/%.16/%.3/meth">
-      <details key="start" value="1607"/>
-      <details key="end" value="1611"/>
+    <eAnnotations source="positions.119" references="/0/generateModelBase/%/%/%.17/%/%.3/meth">
+      <details key="start" value="1684"/>
+      <details key="end" value="1688"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.118" references="/0/generateModelBase/%/%/%.16/%.4">
-      <details key="start" value="1618"/>
-      <details key="end" value="1619"/>
-      <details key="line" value="53"/>
+    <eAnnotations source="positions.120" references="/0/generateModelBase/%/%/%.17/%/%.4">
+      <details key="start" value="1695"/>
+      <details key="end" value="1696"/>
+      <details key="line" value="55"/>
     </eAnnotations>
-    <eAnnotations source="positions.119" references="/0/generateModelBase/%/%/%.16/%.5">
-      <details key="start" value="1619"/>
-      <details key="end" value="1760"/>
-      <details key="line" value="53"/>
+    <eAnnotations source="positions.121" references="/0/generateModelBase/%/%/%.17/%/%.5">
+      <details key="start" value="1696"/>
+      <details key="end" value="1837"/>
+      <details key="line" value="55"/>
     </eAnnotations>
-    <eAnnotations source="positions.120" references="/0/generateModelBase/%/%/%.16/%.5/%">
-      <details key="start" value="1694"/>
-      <details key="end" value="1726"/>
+    <eAnnotations source="positions.122" references="/0/generateModelBase/%/%/%.17/%/%.5/%">
+      <details key="start" value="1771"/>
+      <details key="end" value="1803"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.121" references="/0/generateModelBase/%/%/%.16/%.5/%/%">
-      <details key="start" value="1703"/>
-      <details key="end" value="1725"/>
+    <eAnnotations source="positions.123" references="/0/generateModelBase/%/%/%.17/%/%.5/%/%">
+      <details key="start" value="1780"/>
+      <details key="end" value="1802"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.122" references="/0/generateModelBase/%/%/%.16/%.5/%/%/%">
-      <details key="start" value="1703"/>
-      <details key="end" value="1718"/>
+    <eAnnotations source="positions.124" references="/0/generateModelBase/%/%/%.17/%/%.5/%/%/%">
+      <details key="start" value="1780"/>
+      <details key="end" value="1795"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.123" references="/0/generateModelBase/%/%/%.16/%.5/%/%/%/meth">
-      <details key="start" value="1703"/>
-      <details key="end" value="1707"/>
+    <eAnnotations source="positions.125" references="/0/generateModelBase/%/%/%.17/%/%.5/%/%/%/meth">
+      <details key="start" value="1780"/>
+      <details key="end" value="1784"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.124" references="/0/generateModelBase/%/%/%.16/%.5/%/%/i">
-      <details key="start" value="1723"/>
-      <details key="end" value="1724"/>
+    <eAnnotations source="positions.126" references="/0/generateModelBase/%/%/%.17/%/%.5/%/%/i">
+      <details key="start" value="1800"/>
+      <details key="end" value="1801"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.125" references="/0/generateModelBase/%/%/%.16/%.5/%.1">
-      <details key="start" value="1728"/>
-      <details key="end" value="1729"/>
-      <details key="line" value="53"/>
+    <eAnnotations source="positions.127" references="/0/generateModelBase/%/%/%.17/%/%.5/%.1">
+      <details key="start" value="1805"/>
+      <details key="end" value="1806"/>
+      <details key="line" value="55"/>
     </eAnnotations>
-    <eAnnotations source="positions.126" references="/0/generateModelBase/%/%/%.16/%.5/%.2">
-      <details key="start" value="1730"/>
+    <eAnnotations source="positions.128" references="/0/generateModelBase/%/%/%.17/%/%.5/%.2">
+      <details key="start" value="1807"/>
+      <details key="end" value="1829"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateModelBase/%/%/%.17/%/%.5/%.2/%">
+      <details key="start" value="1807"/>
+      <details key="end" value="1822"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateModelBase/%/%/%.17/%/%.5/%.2/%/meth">
+      <details key="start" value="1807"/>
+      <details key="end" value="1811"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateModelBase/%/%/%.17/%/%.5/%.2/i">
+      <details key="start" value="1827"/>
+      <details key="end" value="1828"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateModelBase/%/%/%.17/%/%.5/i">
+      <details key="start" value="1702"/>
+      <details key="end" value="1713"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateModelBase/%/%/%.17/%/%.5/%.3">
+      <details key="start" value="1716"/>
       <details key="end" value="1752"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.127" references="/0/generateModelBase/%/%/%.16/%.5/%.2/%">
-      <details key="start" value="1730"/>
-      <details key="end" value="1745"/>
+    <eAnnotations source="positions.134" references="/0/generateModelBase/%/%/%.17/%/%.5/%.3/%/%">
+      <details key="start" value="1725"/>
+      <details key="end" value="1726"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.128" references="/0/generateModelBase/%/%/%.16/%.5/%.2/%/meth">
-      <details key="start" value="1730"/>
-      <details key="end" value="1734"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.129" references="/0/generateModelBase/%/%/%.16/%.5/%.2/i">
-      <details key="start" value="1750"/>
+    <eAnnotations source="positions.135" references="/0/generateModelBase/%/%/%.17/%/%.5/%.3/%/%.1">
+      <details key="start" value="1728"/>
       <details key="end" value="1751"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.130" references="/0/generateModelBase/%/%/%.16/%.5/i">
-      <details key="start" value="1625"/>
-      <details key="end" value="1636"/>
-      <details key="line" value="53"/>
-    </eAnnotations>
-    <eAnnotations source="positions.131" references="/0/generateModelBase/%/%/%.16/%.5/%.3">
-      <details key="start" value="1639"/>
-      <details key="end" value="1675"/>
+    <eAnnotations source="positions.136" references="/0/generateModelBase/%/%/%.17/%/%.5/%.3/%/%.1/%">
+      <details key="start" value="1728"/>
+      <details key="end" value="1743"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.132" references="/0/generateModelBase/%/%/%.16/%.5/%.3/%/%">
-      <details key="start" value="1648"/>
-      <details key="end" value="1649"/>
+    <eAnnotations source="positions.137" references="/0/generateModelBase/%/%/%.17/%/%.5/%.3/%/%.1/%/meth">
+      <details key="start" value="1728"/>
+      <details key="end" value="1732"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.133" references="/0/generateModelBase/%/%/%.16/%.5/%.3/%/%.1">
-      <details key="start" value="1651"/>
-      <details key="end" value="1674"/>
+    <eAnnotations source="positions.138" references="/0/generateModelBase/%/%/%.17/%/%.5/%.4">
+      <details key="start" value="1764"/>
+      <details key="end" value="1768"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.134" references="/0/generateModelBase/%/%/%.16/%.5/%.3/%/%.1/%">
-      <details key="start" value="1651"/>
-      <details key="end" value="1666"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.135" references="/0/generateModelBase/%/%/%.16/%.5/%.3/%/%.1/%/meth">
-      <details key="start" value="1651"/>
-      <details key="end" value="1655"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.136" references="/0/generateModelBase/%/%/%.16/%.5/%.4">
-      <details key="start" value="1687"/>
-      <details key="end" value="1691"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.137" references="/0/generateModelBase/%/%/%.16/%.6">
-      <details key="start" value="1760"/>
-      <details key="end" value="1764"/>
-      <details key="line" value="53"/>
-    </eAnnotations>
-    <eAnnotations source="positions.138" references="/0/generateModelBase/%/%/%.16/%.7">
-      <details key="start" value="1769"/>
-      <details key="end" value="1974"/>
-      <details key="line" value="54"/>
-    </eAnnotations>
-    <eAnnotations source="positions.139" references="/0/generateModelBase/%/%/%.16/%.7/%">
-      <details key="start" value="1814"/>
-      <details key="end" value="1851"/>
+    <eAnnotations source="positions.139" references="/0/generateModelBase/%/%/%.17/%/%.6">
+      <details key="start" value="1837"/>
+      <details key="end" value="1841"/>
       <details key="line" value="55"/>
     </eAnnotations>
-    <eAnnotations source="positions.140" references="/0/generateModelBase/%/%/%.16/%.7/%.1">
-      <details key="start" value="1852"/>
-      <details key="end" value="1861"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.141" references="/0/generateModelBase/%/%/%.16/%.7/%.1/meth">
-      <details key="start" value="1852"/>
-      <details key="end" value="1856"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.142" references="/0/generateModelBase/%/%/%.16/%.7/%.2">
-      <details key="start" value="1863"/>
-      <details key="end" value="1864"/>
+    <eAnnotations source="positions.140" references="/0/generateModelBase/%/%/%.17/%/%.7">
+      <details key="start" value="1846"/>
+      <details key="end" value="2051"/>
       <details key="line" value="56"/>
     </eAnnotations>
-    <eAnnotations source="positions.143" references="/0/generateModelBase/%/%/%.16/%.7/%.3">
-      <details key="start" value="1773"/>
-      <details key="end" value="1812"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.144" references="/0/generateModelBase/%/%/%.16/%.7/%.3/%">
-      <details key="start" value="1774"/>
-      <details key="end" value="1789"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.145" references="/0/generateModelBase/%/%/%.16/%.7/%.3/%/meth">
-      <details key="start" value="1774"/>
-      <details key="end" value="1778"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.146" references="/0/generateModelBase/%/%/%.16/%.7/%.3/%.1">
-      <details key="start" value="1802"/>
-      <details key="end" value="1810"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.147" references="/0/generateModelBase/%/%/%.16/%.7/%.4">
-      <details key="start" value="1869"/>
-      <details key="end" value="1969"/>
-      <details key="line" value="56"/>
-    </eAnnotations>
-    <eAnnotations source="positions.148" references="/0/generateModelBase/%/%/%.16/%.7/%.4/%">
-      <details key="start" value="1876"/>
-      <details key="end" value="1951"/>
+    <eAnnotations source="positions.141" references="/0/generateModelBase/%/%/%.17/%/%.7/%">
+      <details key="start" value="1891"/>
+      <details key="end" value="1928"/>
       <details key="line" value="57"/>
     </eAnnotations>
-    <eAnnotations source="positions.149" references="/0/generateModelBase/%/%/%.16/%.7/%.4/%.1">
-      <details key="start" value="1952"/>
-      <details key="end" value="1961"/>
+    <eAnnotations source="positions.142" references="/0/generateModelBase/%/%/%.17/%/%.7/%.1">
+      <details key="start" value="1929"/>
+      <details key="end" value="1938"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.150" references="/0/generateModelBase/%/%/%.16/%.7/%.4/%.1/meth">
-      <details key="start" value="1952"/>
-      <details key="end" value="1956"/>
+    <eAnnotations source="positions.143" references="/0/generateModelBase/%/%/%.17/%/%.7/%.1/meth">
+      <details key="start" value="1929"/>
+      <details key="end" value="1933"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.151" references="/0/generateModelBase/%/%/%.16/%.7/%.4/%.2">
-      <details key="start" value="1963"/>
-      <details key="end" value="1964"/>
+    <eAnnotations source="positions.144" references="/0/generateModelBase/%/%/%.17/%/%.7/%.2">
+      <details key="start" value="1940"/>
+      <details key="end" value="1941"/>
       <details key="line" value="58"/>
     </eAnnotations>
-    <eAnnotations source="positions.152" references="/0/generateModelBase/%/%/%.16/%.8">
-      <details key="start" value="1975"/>
-      <details key="end" value="1978"/>
+    <eAnnotations source="positions.145" references="/0/generateModelBase/%/%/%.17/%/%.7/%.3">
+      <details key="start" value="1850"/>
+      <details key="end" value="1889"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateModelBase/%/%/%.17/%/%.7/%.3/%">
+      <details key="start" value="1851"/>
+      <details key="end" value="1866"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateModelBase/%/%/%.17/%/%.7/%.3/%/meth">
+      <details key="start" value="1851"/>
+      <details key="end" value="1855"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateModelBase/%/%/%.17/%/%.7/%.3/%.1">
+      <details key="start" value="1879"/>
+      <details key="end" value="1887"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateModelBase/%/%/%.17/%/%.7/%.4">
+      <details key="start" value="1946"/>
+      <details key="end" value="2046"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateModelBase/%/%/%.17/%/%.7/%.4/%">
+      <details key="start" value="1953"/>
+      <details key="end" value="2028"/>
       <details key="line" value="59"/>
     </eAnnotations>
-    <eAnnotations source="positions.153" references="/0/generateModelBase/%/%/%.16/meth">
-      <details key="start" value="1540"/>
-      <details key="end" value="1553"/>
-      <details key="line" value="52"/>
-    </eAnnotations>
-    <eAnnotations source="positions.154" references="/0/generateModelBase/%/%/%.16/%.9">
-      <details key="start" value="1556"/>
-      <details key="end" value="1566"/>
+    <eAnnotations source="positions.151" references="/0/generateModelBase/%/%/%.17/%/%.7/%.4/%.1">
+      <details key="start" value="2029"/>
+      <details key="end" value="2038"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.155" references="/0/generateModelBase/%/%/%.16/%.9/cl">
-      <details key="start" value="1556"/>
-      <details key="end" value="1558"/>
+    <eAnnotations source="positions.152" references="/0/generateModelBase/%/%/%.17/%/%.7/%.4/%.1/meth">
+      <details key="start" value="2029"/>
+      <details key="end" value="2033"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.156" references="/0/generateModelBase/%/%/%.17">
-      <details key="start" value="1986"/>
-      <details key="end" value="1989"/>
+    <eAnnotations source="positions.153" references="/0/generateModelBase/%/%/%.17/%/%.7/%.4/%.2">
+      <details key="start" value="2040"/>
+      <details key="end" value="2041"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/generateModelBase/%/%/%.17/%/%.8">
+      <details key="start" value="2052"/>
+      <details key="end" value="2055"/>
       <details key="line" value="61"/>
     </eAnnotations>
-    <eAnnotations source="positions.157" references="/0/generateModelBase/%/%/%.18">
+    <eAnnotations source="positions.155" references="/0/generateModelBase/%/%/%.17/%/%.9">
+      <details key="start" value="1575"/>
+      <details key="end" value="1644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/generateModelBase/%/%/%.17/%/%.9/%">
+      <details key="start" value="1576"/>
+      <details key="end" value="1607"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/generateModelBase/%/%/%.17/%/%.9/%/%">
+      <details key="start" value="1580"/>
+      <details key="end" value="1607"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generateModelBase/%/%/%.17/%/%.9/%/%/%">
+      <details key="start" value="1580"/>
+      <details key="end" value="1589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/generateModelBase/%/%/%.17/%/%.9/%/%/%/meth">
+      <details key="start" value="1580"/>
+      <details key="end" value="1584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/generateModelBase/%/%/%.17/%/%.9/%/%/%.1">
+      <details key="start" value="1601"/>
+      <details key="end" value="1606"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/generateModelBase/%/%/%.17/%/%.9/%.1">
+      <details key="start" value="1612"/>
+      <details key="end" value="1643"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/generateModelBase/%/%/%.17/%/%.9/%.1/%">
+      <details key="start" value="1616"/>
+      <details key="end" value="1643"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/generateModelBase/%/%/%.17/%/%.9/%.1/%/%">
+      <details key="start" value="1616"/>
+      <details key="end" value="1625"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/generateModelBase/%/%/%.17/%/%.9/%.1/%/%/meth">
+      <details key="start" value="1616"/>
+      <details key="end" value="1620"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/generateModelBase/%/%/%.17/%/%.9/%.1/%/%.1">
+      <details key="start" value="1637"/>
+      <details key="end" value="1642"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/generateModelBase/%/%/%.17/meth">
+      <details key="start" value="1541"/>
+      <details key="end" value="1554"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/generateModelBase/%/%/%.17/%.1">
+      <details key="start" value="1557"/>
+      <details key="end" value="1567"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/generateModelBase/%/%/%.17/%.1/cl">
+      <details key="start" value="1557"/>
+      <details key="end" value="1559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/generateModelBase/%/%/%.18">
+      <details key="start" value="2070"/>
+      <details key="end" value="2073"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/generateModelBase/%/%/%.19">
       <details key="start" value="561"/>
       <details key="end" value="584"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.158" references="/0/generateModelBase/%/%/%.18/%">
+    <eAnnotations source="positions.171" references="/0/generateModelBase/%/%/%.19/%">
       <details key="start" value="561"/>
       <details key="end" value="568"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.159" references="/0/generateModelBase/%/%/%.18/%/cl">
+    <eAnnotations source="positions.172" references="/0/generateModelBase/%/%/%.19/%/cl">
       <details key="start" value="561"/>
       <details key="end" value="563"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.160" references="/0/generateModelBase/%/%/%.18/%.1">
+    <eAnnotations source="positions.173" references="/0/generateModelBase/%/%/%.19/%.1">
       <details key="start" value="576"/>
       <details key="end" value="583"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.161" references="/0/generateModelBase/%/%/%.19">
+    <eAnnotations source="positions.174" references="/0/generateModelBase/%/%/%.20">
       <details key="start" value="593"/>
       <details key="end" value="600"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.162" references="/0/generateModelBase/%/cl">
+    <eAnnotations source="positions.175" references="/0/generateModelBase/%/cl">
       <details key="start" value="517"/>
       <details key="end" value="527"/>
       <details key="line" value="19"/>
     </eAnnotations>
-    <eAnnotations source="positions.163" references="/0/generateModelBase/%/%.1">
+    <eAnnotations source="positions.176" references="/0/generateModelBase/%/%.1">
       <details key="start" value="530"/>
       <details key="end" value="551"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.164" references="/0/generateModelBase/%/%.1/aModelBase">
+    <eAnnotations source="positions.177" references="/0/generateModelBase/%/%.1/aModelBase">
       <details key="start" value="530"/>
       <details key="end" value="540"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.165" references="/0/generateModelBase/aModelBase">
+    <eAnnotations source="positions.178" references="/0/generateModelBase/aModelBase">
       <details key="start" value="469"/>
       <details key="end" value="491"/>
       <details key="line" value="17"/>
