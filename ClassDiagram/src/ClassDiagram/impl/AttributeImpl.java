@@ -8,6 +8,7 @@ import ClassDiagram.ClassDiagramTables;
 import ClassDiagram.Classifier;
 import ClassDiagram.Type;
 
+import ClassDiagram.Variable;
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Map;
@@ -52,6 +53,7 @@ import org.eclipse.ocl.pivot.values.IntegerValue;
  *   <li>{@link ClassDiagram.impl.AttributeImpl#getType <em>Type</em>}</li>
  *   <li>{@link ClassDiagram.impl.AttributeImpl#getOwner <em>Owner</em>}</li>
  *   <li>{@link ClassDiagram.impl.AttributeImpl#getMultiplicity <em>Multiplicity</em>}</li>
+ *   <li>{@link ClassDiagram.impl.AttributeImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +88,16 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 	 * @ordered
 	 */
 	protected int multiplicity = MULTIPLICITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected Variable variable;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,6 +230,51 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 	 * @generated
 	 */
 	@Override
+	public Variable getVariable() {
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVariable(Variable newVariable, NotificationChain msgs) {
+		Variable oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.ATTRIBUTE__VARIABLE, oldVariable, newVariable);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setVariable(Variable newVariable) {
+		if (newVariable != variable) {
+			NotificationChain msgs = null;
+			if (variable != null)
+				msgs = ((InternalEObject)variable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ClassDiagramPackage.ATTRIBUTE__VARIABLE, null, msgs);
+			if (newVariable != null)
+				msgs = ((InternalEObject)newVariable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ClassDiagramPackage.ATTRIBUTE__VARIABLE, null, msgs);
+			msgs = basicSetVariable(newVariable, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.ATTRIBUTE__VARIABLE, newVariable, newVariable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public boolean attributeNotVoid(final DiagnosticChain diagnostics, final Map<Object, Object> context) {
 		final String constraintName = "Attribute::attributeNotVoid";
 		try {
@@ -294,6 +351,8 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 		switch (featureID) {
 			case ClassDiagramPackage.ATTRIBUTE__OWNER:
 				return basicSetOwner(null, msgs);
+			case ClassDiagramPackage.ATTRIBUTE__VARIABLE:
+				return basicSetVariable(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -327,6 +386,8 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 				return getOwner();
 			case ClassDiagramPackage.ATTRIBUTE__MULTIPLICITY:
 				return getMultiplicity();
+			case ClassDiagramPackage.ATTRIBUTE__VARIABLE:
+				return getVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -347,6 +408,9 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 				return;
 			case ClassDiagramPackage.ATTRIBUTE__MULTIPLICITY:
 				setMultiplicity((Integer)newValue);
+				return;
+			case ClassDiagramPackage.ATTRIBUTE__VARIABLE:
+				setVariable((Variable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -369,6 +433,9 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 			case ClassDiagramPackage.ATTRIBUTE__MULTIPLICITY:
 				setMultiplicity(MULTIPLICITY_EDEFAULT);
 				return;
+			case ClassDiagramPackage.ATTRIBUTE__VARIABLE:
+				setVariable((Variable)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -387,6 +454,8 @@ public class AttributeImpl extends NamedElementImpl implements Attribute {
 				return getOwner() != null;
 			case ClassDiagramPackage.ATTRIBUTE__MULTIPLICITY:
 				return multiplicity != MULTIPLICITY_EDEFAULT;
+			case ClassDiagramPackage.ATTRIBUTE__VARIABLE:
+				return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}

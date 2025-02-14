@@ -1,6 +1,6 @@
 package generate;
 
-public class Account {
+public class Account implements IOperations {
 
     private int id;
     private int overdraft;
@@ -40,6 +40,17 @@ public class Account {
 	public void changeOverdraft(int val) {
 	    // TODO: Implémenter la méthode changeOverdraft
 	}
+
+    @Override
+    public void whitdraw(int val) {
+        // TODO: Implémenter la méthode whitdraw
+    }
+
+    @Override
+    public void deposit(int val) {
+        // TODO: Implémenter la méthode deposit
+    }
+
 
 
 }

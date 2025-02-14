@@ -20,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link ClassDiagram.Method#getParamTypes <em>Param Types</em>}</li>
  *   <li>{@link ClassDiagram.Method#getParamNames <em>Param Names</em>}</li>
  *   <li>{@link ClassDiagram.Method#getOwner <em>Owner</em>}</li>
+ *   <li>{@link ClassDiagram.Method#getExpressions <em>Expressions</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getMethod()
@@ -96,6 +97,19 @@ public interface Method extends NamedElement {
 	 * @generated
 	 */
 	void setOwner(Classifier value);
+
+	/**
+	 * Returns the value of the '<em><b>Expressions</b></em>' containment reference list.
+	 * The list contents are of type {@link ClassDiagram.ExpressionElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expressions</em>' containment reference list.
+	 * @see ClassDiagram.ClassDiagramPackage#getMethod_Expressions()
+	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/OCL/Collection nullFree='false'"
+	 * @generated
+	 */
+	EList<ExpressionElement> getExpressions();
 
 	/**
 	 * <!-- begin-user-doc -->

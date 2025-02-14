@@ -5,6 +5,7 @@ package ClassDiagram.impl;
 import ClassDiagram.ClassDiagramPackage;
 import ClassDiagram.ClassDiagramTables;
 import ClassDiagram.Classifier;
+import ClassDiagram.ExpressionElement;
 import ClassDiagram.Method;
 import ClassDiagram.Type;
 
@@ -27,9 +28,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.ocl.pivot.evaluation.Executor;
 
 import org.eclipse.ocl.pivot.ids.IdResolver;
@@ -64,6 +67,7 @@ import org.eclipse.ocl.pivot.values.OrderedSetValue;
  *   <li>{@link ClassDiagram.impl.MethodImpl#getParamTypes <em>Param Types</em>}</li>
  *   <li>{@link ClassDiagram.impl.MethodImpl#getParamNames <em>Param Names</em>}</li>
  *   <li>{@link ClassDiagram.impl.MethodImpl#getOwner <em>Owner</em>}</li>
+ *   <li>{@link ClassDiagram.impl.MethodImpl#getExpressions <em>Expressions</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,6 +102,16 @@ public class MethodImpl extends NamedElementImpl implements Method {
 	 * @ordered
 	 */
 	protected EList<String> paramNames;
+
+	/**
+	 * The cached value of the '{@link #getExpressions() <em>Expressions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpressions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ExpressionElement> expressions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,6 +239,19 @@ public class MethodImpl extends NamedElementImpl implements Method {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ClassDiagramPackage.METHOD__OWNER, newOwner, newOwner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ExpressionElement> getExpressions() {
+		if (expressions == null) {
+			expressions = new EObjectContainmentEList<ExpressionElement>(ExpressionElement.class, this, ClassDiagramPackage.METHOD__EXPRESSIONS);
+		}
+		return expressions;
 	}
 
 	/**
@@ -398,6 +425,8 @@ public class MethodImpl extends NamedElementImpl implements Method {
 		switch (featureID) {
 			case ClassDiagramPackage.METHOD__OWNER:
 				return basicSetOwner(null, msgs);
+			case ClassDiagramPackage.METHOD__EXPRESSIONS:
+				return ((InternalEList<?>)getExpressions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -433,6 +462,8 @@ public class MethodImpl extends NamedElementImpl implements Method {
 				return getParamNames();
 			case ClassDiagramPackage.METHOD__OWNER:
 				return getOwner();
+			case ClassDiagramPackage.METHOD__EXPRESSIONS:
+				return getExpressions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -460,6 +491,10 @@ public class MethodImpl extends NamedElementImpl implements Method {
 			case ClassDiagramPackage.METHOD__OWNER:
 				setOwner((Classifier)newValue);
 				return;
+			case ClassDiagramPackage.METHOD__EXPRESSIONS:
+				getExpressions().clear();
+				getExpressions().addAll((Collection<? extends ExpressionElement>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -484,6 +519,9 @@ public class MethodImpl extends NamedElementImpl implements Method {
 			case ClassDiagramPackage.METHOD__OWNER:
 				setOwner((Classifier)null);
 				return;
+			case ClassDiagramPackage.METHOD__EXPRESSIONS:
+				getExpressions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -504,6 +542,8 @@ public class MethodImpl extends NamedElementImpl implements Method {
 				return paramNames != null && !paramNames.isEmpty();
 			case ClassDiagramPackage.METHOD__OWNER:
 				return getOwner() != null;
+			case ClassDiagramPackage.METHOD__EXPRESSIONS:
+				return expressions != null && !expressions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

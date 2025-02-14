@@ -4,6 +4,7 @@ package ClassDiagram;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -700,13 +701,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int ATTRIBUTE__MULTIPLICITY = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__VARIABLE = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int ATTRIBUTE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Attribute Not Void</em>' operation.
@@ -782,13 +792,22 @@ public interface ClassDiagramPackage extends EPackage {
 	int METHOD__OWNER = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD__EXPRESSIONS = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int METHOD_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Param Not Void</em>' operation.
@@ -1017,6 +1036,496 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @ordered
 	 */
 	int ASSOCIATION_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.ExpressionElementImpl <em>Expression Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.ExpressionElementImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getExpressionElement()
+	 * @generated
+	 */
+	int EXPRESSION_ELEMENT = 15;
+
+	/**
+	 * The number of structural features of the '<em>Expression Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_ELEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Expression Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.ExpressionImpl <em>Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.ExpressionImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getExpression()
+	 * @generated
+	 */
+	int EXPRESSION = 16;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__LEFT = EXPRESSION_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__RIGHT = EXPRESSION_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__OPERATOR = EXPRESSION_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__NAME = EXPRESSION_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_FEATURE_COUNT = EXPRESSION_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_OPERATION_COUNT = EXPRESSION_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.DataImpl <em>Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.DataImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getData()
+	 * @generated
+	 */
+	int DATA = 17;
+
+	/**
+	 * The number of structural features of the '<em>Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_FEATURE_COUNT = EXPRESSION_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_OPERATION_COUNT = EXPRESSION_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.BooleanDataImpl <em>Boolean Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.BooleanDataImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooleanData()
+	 * @generated
+	 */
+	int BOOLEAN_DATA = 18;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_DATA__VALUE = DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Boolean Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Boolean Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_DATA_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.IntegerDataImpl <em>Integer Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.IntegerDataImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIntegerData()
+	 * @generated
+	 */
+	int INTEGER_DATA = 19;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_DATA__VALUE = DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Integer Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Integer Data</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_DATA_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.VariableImpl <em>Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.VariableImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getVariable()
+	 * @generated
+	 */
+	int VARIABLE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.BooleanVariableImpl <em>Boolean Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.BooleanVariableImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooleanVariable()
+	 * @generated
+	 */
+	int BOOLEAN_VARIABLE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE__VALUE = VARIABLE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE__NAME = VARIABLE__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Boolean Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Boolean Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.IntegerVariableImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIntegerVariable()
+	 * @generated
+	 */
+	int INTEGER_VARIABLE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE__VALUE = VARIABLE__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE__NAME = VARIABLE__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Integer Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Integer Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.OperationImpl <em>Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.OperationImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getOperation()
+	 * @generated
+	 */
+	int OPERATION = 23;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__CONTENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.AssignmentImpl <em>Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.AssignmentImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getAssignment()
+	 * @generated
+	 */
+	int ASSIGNMENT = 24;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSIGNMENT__EXPRESSION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSIGNMENT__VARIABLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSIGNMENT__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>Assignment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSIGNMENT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Assignment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSIGNMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.impl.VariableReferenceImpl
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getVariableReference()
+	 * @generated
+	 */
+	int VARIABLE_REFERENCE = 25;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE__VARIABLE = EXPRESSION_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE__NAME = EXPRESSION_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Variable Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE_FEATURE_COUNT = EXPRESSION_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Variable Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE_OPERATION_COUNT = EXPRESSION_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ClassDiagram.Operator <em>Operator</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ClassDiagram.Operator
+	 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getOperator()
+	 * @generated
+	 */
+	int OPERATOR = 26;
 
 
 	/**
@@ -1355,6 +1864,17 @@ public interface ClassDiagramPackage extends EPackage {
 	EAttribute getAttribute_Multiplicity();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link ClassDiagram.Attribute#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
+	 * @see ClassDiagram.Attribute#getVariable()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_Variable();
+
+	/**
 	 * Returns the meta object for the '{@link ClassDiagram.Attribute#attributeNotVoid(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Attribute Not Void</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1417,6 +1937,17 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMethod_Owner();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link ClassDiagram.Method#getExpressions <em>Expressions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Expressions</em>'.
+	 * @see ClassDiagram.Method#getExpressions()
+	 * @see #getMethod()
+	 * @generated
+	 */
+	EReference getMethod_Expressions();
 
 	/**
 	 * Returns the meta object for the '{@link ClassDiagram.Method#paramNotVoid(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Param Not Void</em>}' operation.
@@ -1543,6 +2074,291 @@ public interface ClassDiagramPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAssociation_Ends();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.ExpressionElement <em>Expression Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression Element</em>'.
+	 * @see ClassDiagram.ExpressionElement
+	 * @generated
+	 */
+	EClass getExpressionElement();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression</em>'.
+	 * @see ClassDiagram.Expression
+	 * @generated
+	 */
+	EClass getExpression();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ClassDiagram.Expression#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see ClassDiagram.Expression#getLeft()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EReference getExpression_Left();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ClassDiagram.Expression#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see ClassDiagram.Expression#getRight()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EReference getExpression_Right();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Expression#getOperator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Operator</em>'.
+	 * @see ClassDiagram.Expression#getOperator()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_Operator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Expression#get_name <em>name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>name</em>'.
+	 * @see ClassDiagram.Expression#get_name()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression__name();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Data <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data</em>'.
+	 * @see ClassDiagram.Data
+	 * @generated
+	 */
+	EClass getData();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.BooleanData <em>Boolean Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean Data</em>'.
+	 * @see ClassDiagram.BooleanData
+	 * @generated
+	 */
+	EClass getBooleanData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.BooleanData#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see ClassDiagram.BooleanData#isValue()
+	 * @see #getBooleanData()
+	 * @generated
+	 */
+	EAttribute getBooleanData_Value();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.IntegerData <em>Integer Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integer Data</em>'.
+	 * @see ClassDiagram.IntegerData
+	 * @generated
+	 */
+	EClass getIntegerData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.IntegerData#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see ClassDiagram.IntegerData#getValue()
+	 * @see #getIntegerData()
+	 * @generated
+	 */
+	EAttribute getIntegerData_Value();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable</em>'.
+	 * @see ClassDiagram.Variable
+	 * @generated
+	 */
+	EClass getVariable();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ClassDiagram.Variable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see ClassDiagram.Variable#getValue()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Variable#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ClassDiagram.Variable#getName()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Name();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.BooleanVariable <em>Boolean Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean Variable</em>'.
+	 * @see ClassDiagram.BooleanVariable
+	 * @generated
+	 */
+	EClass getBooleanVariable();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.IntegerVariable <em>Integer Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integer Variable</em>'.
+	 * @see ClassDiagram.IntegerVariable
+	 * @generated
+	 */
+	EClass getIntegerVariable();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Operation <em>Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Operation</em>'.
+	 * @see ClassDiagram.Operation
+	 * @generated
+	 */
+	EClass getOperation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link ClassDiagram.Operation#getContents <em>Contents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contents</em>'.
+	 * @see ClassDiagram.Operation#getContents()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EReference getOperation_Contents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Operation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ClassDiagram.Operation#getName()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EAttribute getOperation_Name();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.Assignment <em>Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Assignment</em>'.
+	 * @see ClassDiagram.Assignment
+	 * @generated
+	 */
+	EClass getAssignment();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link ClassDiagram.Assignment#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see ClassDiagram.Assignment#getExpression()
+	 * @see #getAssignment()
+	 * @generated
+	 */
+	EReference getAssignment_Expression();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.Assignment#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see ClassDiagram.Assignment#getVariable()
+	 * @see #getAssignment()
+	 * @generated
+	 */
+	EReference getAssignment_Variable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.Assignment#get_name <em>name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>name</em>'.
+	 * @see ClassDiagram.Assignment#get_name()
+	 * @see #getAssignment()
+	 * @generated
+	 */
+	EAttribute getAssignment__name();
+
+	/**
+	 * Returns the meta object for class '{@link ClassDiagram.VariableReference <em>Variable Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable Reference</em>'.
+	 * @see ClassDiagram.VariableReference
+	 * @generated
+	 */
+	EClass getVariableReference();
+
+	/**
+	 * Returns the meta object for the reference '{@link ClassDiagram.VariableReference#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see ClassDiagram.VariableReference#getVariable()
+	 * @see #getVariableReference()
+	 * @generated
+	 */
+	EReference getVariableReference_Variable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ClassDiagram.VariableReference#get_name <em>name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>name</em>'.
+	 * @see ClassDiagram.VariableReference#get_name()
+	 * @see #getVariableReference()
+	 * @generated
+	 */
+	EAttribute getVariableReference__name();
+
+	/**
+	 * Returns the meta object for enum '{@link ClassDiagram.Operator <em>Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Operator</em>'.
+	 * @see ClassDiagram.Operator
+	 * @generated
+	 */
+	EEnum getOperator();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1846,6 +2662,14 @@ public interface ClassDiagramPackage extends EPackage {
 		EAttribute ATTRIBUTE__MULTIPLICITY = eINSTANCE.getAttribute_Multiplicity();
 
 		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__VARIABLE = eINSTANCE.getAttribute_Variable();
+
+		/**
 		 * The meta object literal for the '<em><b>Attribute Not Void</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1894,6 +2718,14 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference METHOD__OWNER = eINSTANCE.getMethod_Owner();
+
+		/**
+		 * The meta object literal for the '<em><b>Expressions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHOD__EXPRESSIONS = eINSTANCE.getMethod_Expressions();
 
 		/**
 		 * The meta object literal for the '<em><b>Param Not Void</b></em>' operation.
@@ -1996,6 +2828,246 @@ public interface ClassDiagramPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSOCIATION__ENDS = eINSTANCE.getAssociation_Ends();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.ExpressionElementImpl <em>Expression Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.ExpressionElementImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getExpressionElement()
+		 * @generated
+		 */
+		EClass EXPRESSION_ELEMENT = eINSTANCE.getExpressionElement();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.ExpressionImpl <em>Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.ExpressionImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getExpression()
+		 * @generated
+		 */
+		EClass EXPRESSION = eINSTANCE.getExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION__LEFT = eINSTANCE.getExpression_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION__RIGHT = eINSTANCE.getExpression_Right();
+
+		/**
+		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__OPERATOR = eINSTANCE.getExpression_Operator();
+
+		/**
+		 * The meta object literal for the '<em><b>name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__NAME = eINSTANCE.getExpression__name();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.DataImpl <em>Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.DataImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getData()
+		 * @generated
+		 */
+		EClass DATA = eINSTANCE.getData();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.BooleanDataImpl <em>Boolean Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.BooleanDataImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooleanData()
+		 * @generated
+		 */
+		EClass BOOLEAN_DATA = eINSTANCE.getBooleanData();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN_DATA__VALUE = eINSTANCE.getBooleanData_Value();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.IntegerDataImpl <em>Integer Data</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.IntegerDataImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIntegerData()
+		 * @generated
+		 */
+		EClass INTEGER_DATA = eINSTANCE.getIntegerData();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_DATA__VALUE = eINSTANCE.getIntegerData_Value();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.VariableImpl <em>Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.VariableImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getVariable()
+		 * @generated
+		 */
+		EClass VARIABLE = eINSTANCE.getVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__VALUE = eINSTANCE.getVariable_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.BooleanVariableImpl <em>Boolean Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.BooleanVariableImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getBooleanVariable()
+		 * @generated
+		 */
+		EClass BOOLEAN_VARIABLE = eINSTANCE.getBooleanVariable();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.IntegerVariableImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getIntegerVariable()
+		 * @generated
+		 */
+		EClass INTEGER_VARIABLE = eINSTANCE.getIntegerVariable();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.OperationImpl <em>Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.OperationImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getOperation()
+		 * @generated
+		 */
+		EClass OPERATION = eINSTANCE.getOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Contents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION__CONTENTS = eINSTANCE.getOperation_Contents();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATION__NAME = eINSTANCE.getOperation_Name();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.AssignmentImpl <em>Assignment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.AssignmentImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getAssignment()
+		 * @generated
+		 */
+		EClass ASSIGNMENT = eINSTANCE.getAssignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSIGNMENT__EXPRESSION = eINSTANCE.getAssignment_Expression();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSIGNMENT__VARIABLE = eINSTANCE.getAssignment_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSIGNMENT__NAME = eINSTANCE.getAssignment__name();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.impl.VariableReferenceImpl
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getVariableReference()
+		 * @generated
+		 */
+		EClass VARIABLE_REFERENCE = eINSTANCE.getVariableReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_REFERENCE__VARIABLE = eINSTANCE.getVariableReference_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE_REFERENCE__NAME = eINSTANCE.getVariableReference__name();
+
+		/**
+		 * The meta object literal for the '{@link ClassDiagram.Operator <em>Operator</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ClassDiagram.Operator
+		 * @see ClassDiagram.impl.ClassDiagramPackageImpl#getOperator()
+		 * @generated
+		 */
+		EEnum OPERATOR = eINSTANCE.getOperator();
 
 	}
 

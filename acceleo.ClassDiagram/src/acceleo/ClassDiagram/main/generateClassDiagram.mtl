@@ -14,13 +14,36 @@ endif
 endif
 /]
 
+[comment Template pour générer la liste des interfaces implémentées par une classe /]
+[template public interfaceList(cl : Class)]
+[for (inter : Interface | cl.interfaces) before('implements ') separator (', ')][inter.name/][/for]
+[/template]
+
 [template public generateModelBase(aModelBase : ModelBase)]
 [comment @main/]
+
+[comment Génération des interfaces /]
+[for (cl : Interface | aModelBase.allInterfaces) ]
+[if (cl.methods->size() > 0)]
+[file (cl.name.concat('.java'), false, 'UTF-8')]
+package generate;
+
+public interface [cl.name/] {
+    [for (meth : Method | cl.methods)] 
+[if (not meth.name.startsWith('get') and not meth.name.startsWith('set'))]
+    [javaType(meth.returnType)/] [meth.name/]([for (i : Integer | Sequence{1..meth.paramTypes->size()}) separator(', ')][javaType(meth.paramTypes->at(i))/] [meth.paramNames->at(i)/][/for]);
+[/if]
+    [/for]
+}
+[/file]
+[/if]
+[/for]
+
 [for (cl : Class | aModelBase.allClasses)]
 [file (cl.name.concat('.java'), false, 'UTF-8')]
 package generate;
 
-public class [ cl.name /] {
+public class [ cl.name /] [interfaceList(cl)/] {
 
     [comment Génération des attributs avec les bons types /]
     [for (att : Attribute | cl.attributes)]
@@ -61,6 +84,24 @@ public class [ cl.name /] {
 	}
 	[/if]
 	[/for]
+
+	[comment Génération des méthodes des interfaces implémentées /]
+    [for (inter : Interface | cl.interfaces)]
+    [for (meth : Method | inter.methods)]
+    [if (not meth.name.startsWith('get') and not meth.name.startsWith('set'))]
+    @Override
+    public [javaType(meth.returnType)/] [meth.name/]([for (i : Integer | Sequence{1..meth.paramTypes->size()}) separator(', ')][javaType(meth.paramTypes->at(i))/] [meth.paramNames->at(i)/][/for]) {
+        [if (meth.returnType.oclIsTypeOf(VoidType))]
+        // TODO: Implémenter la méthode [meth.name/]
+        [else]
+        return null; // TODO: Retourner une valeur appropriée pour la méthode [meth.name/]
+        [/if]
+    }
+
+    [/if]
+    [/for]
+    [/for]
+
 
 }
 [/file]

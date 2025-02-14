@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link ClassDiagram.Attribute#getType <em>Type</em>}</li>
  *   <li>{@link ClassDiagram.Attribute#getOwner <em>Owner</em>}</li>
  *   <li>{@link ClassDiagram.Attribute#getMultiplicity <em>Multiplicity</em>}</li>
+ *   <li>{@link ClassDiagram.Attribute#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @see ClassDiagram.ClassDiagramPackage#getAttribute()
@@ -92,6 +93,28 @@ public interface Attribute extends NamedElement {
 	 * @generated
 	 */
 	void setMultiplicity(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Variable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variable</em>' containment reference.
+	 * @see #setVariable(Variable)
+	 * @see ClassDiagram.ClassDiagramPackage#getAttribute_Variable()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Variable getVariable();
+
+	/**
+	 * Sets the value of the '{@link ClassDiagram.Attribute#getVariable <em>Variable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variable</em>' containment reference.
+	 * @see #getVariable()
+	 * @generated
+	 */
+	void setVariable(Variable value);
 
 	/**
 	 * <!-- begin-user-doc -->

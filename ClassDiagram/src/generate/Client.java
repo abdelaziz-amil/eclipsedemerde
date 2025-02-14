@@ -1,6 +1,6 @@
 package generate;
 
-public class Client {
+public class Client  {
 
     private String name;
     private String addr;
@@ -31,6 +31,7 @@ public class Client {
 	public void changeAddr(String addr) {
 	    // TODO: Implémenter la méthode changeAddr
 	}
+
 
 
 }
